@@ -1,0 +1,412 @@
+$myyellow:rgba($color: #f3f712, $alpha: 0.8);
+body{
+    padding: 0;
+    margin: 0;
+}
+.container {
+    box-sizing: border-box;
+    display: flex;
+    margin: 0 ;
+    padding: 0;
+    width: auto;
+    height: auto;
+    
+
+
+    .left-section {
+        color: white;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        height: auto;
+        background-image: linear-gradient(to left, #610675, #6a18ad, #8128e7c9 100%);
+        padding-bottom: 1%;
+
+        #first-icon-list{
+
+            box-sizing: border-box;
+            margin: 30 auto 30 auto;
+            display: flex;
+            list-style: none;
+            justify-content: space-evenly;
+            padding: 0;
+           
+            span {
+                display: inline-block;
+                margin: 0.5% 10% ;
+                padding:20%;
+                border: 1px solid white;
+                border-radius: 55%;
+                background-color: $myyellow;
+            }
+            div {
+                padding:10px
+            }
+        }
+        #made-btn {
+            // background-image:linear-gradient(to right, rgb(8, 78, 26) 0%, rgb(99, 218, 88) 51%, rgb(155, 223, 146) 100%) ; 
+            background-color: transparent;
+            border-radius: 40%;
+            border: 2px solid white;
+            color: white;
+            padding: 12px 32px;
+            text-align: center;
+            font-size: 16px;
+            width: 90%;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+        #made-btn:hover{
+            background-color: $myyellow;
+            
+        }
+
+        .your-library-list {
+            color: white;
+            box-sizing: border-box;
+            margin: 3% auto 0 5%;
+
+            p{
+                text-align: center;
+                font-weight: bold;
+                border-bottom: 1px double $myyellow;
+
+            }
+
+            ul{
+                list-style: none;
+                margin: 0 0 20 -20;
+
+                a:link, a:visited, a:active{
+                    font-weight: bold;
+                    color: white;
+                    padding: 3px; 
+                    text-decoration: none;
+                }
+                a:hover {
+                    color: rgba($color: #f3f712, $alpha: 0.8);
+
+                    }
+
+                
+            }
+        }
+        .playlist-list{
+            @extend .your-library-list
+        }
+        
+        #new-playlist-btn{
+            @extend #made-btn;
+            margin-top: 1.5%;
+
+        }
+
+    }
+
+    .middle-sec {
+        flex: 2 0.5; 
+        flex-direction: column;
+
+        background-color: #2f0241f8;
+        margin: 0;
+        padding: 0;
+
+        .head-middle-sec {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            margin: 2% auto 0 auto;
+            height: 15%;
+
+            #arrows-icon {
+                box-sizing: border-box;
+                width: 25px;
+                height: 25px;
+                padding-left: 10px;
+                padding-top: 10px;
+
+
+            }
+            #menu img {
+               @extend #arrows-icon;
+               padding-right: 10px;
+               padding-left: 0;
+
+            }
+            
+        }
+
+        .body-middle-sec{
+            text-align: center;
+                    
+            .music-data-btns{
+                display: flex;
+                flex-direction: column;
+
+                .music-data {
+                    width: 45%;
+                    border: 1px solid white;
+                    color: white;
+                    background-image: url(img/beats.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                    margin: auto;
+                    
+                }
+
+                .music-btns{
+            
+                    display: flex;
+                    box-sizing: border-box;
+                    justify-content: center;
+                    margin: 0 12% 0 12%;
+        
+                    button{
+                        background-color:transparent;
+                        border: 1px solid white;
+                        color: white;
+                        border-radius: 30px;
+                        margin-top: 3%;
+                        font-weight: bold;
+        
+                    }
+                    button:hover{
+                        background-color: rgba($color: #f3f712, $alpha: 0.8);;
+        
+                    }
+                    #play-btn{
+                        flex-basis: 80%;
+                        max-width: 120px;
+                        height: 40px;
+                        margin-left:2%;
+
+        
+                    }
+                    #Follow-btn{
+                        @extend #play-btn;
+                        margin-right:2%;
+                    }
+                    #share-btn,#more-btn {
+                        max-width: 50px;
+                        flex-basis: 25%;
+        
+                    }
+                }
+
+            }
+        }
+        
+        .footer-middle-sec{
+            .head-music-list{
+                box-sizing: border-box;
+                margin-top: 5%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                border-bottom: 2px solid white;
+                color: white;
+                #title{
+                    box-sizing: border-box;
+                    flex: 1 1 40%;
+                    padding-right:15%;
+                }
+                #artist{
+                    box-sizing: border-box;
+                    flex: 1 1 20%;
+                    padding-right: 2%;
+
+                }
+                #calender-icon{
+                    flex: 1 1 20%;
+                    padding-right:2%;
+
+                }
+          
+            }
+            
+            .music-list {
+               
+                .list {
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                    padding: 0;
+
+                  
+                    
+                    li {
+                        color: white;
+                        box-sizing: border-box;
+                        padding-bottom: 2%;
+                    }
+                   
+                  
+                    li:nth-child(4n + 1) {
+                        padding-left: 8%;
+                        flex: 1 1 10%;
+
+
+                        img{
+                            width: 15px;
+                            height: 15px;
+                        }
+                   
+                    }
+                    
+                    
+                    li:nth-child(4n + 2) {
+                        // background: orange;
+                        flex: 1 1 40%;
+
+                    }
+                    
+                    li:nth-child(4n + 3) {
+                        // background: green;
+                        flex: 1 1 20%;
+
+                    }
+                    li:nth-child(4n + 4) {
+                        // background: purple;
+                        flex: 1 1 20%;
+
+
+                    }
+                }
+            }
+
+        }
+        
+
+    }
+
+
+
+
+    .right-sec {
+        flex: 1;
+        background-image: linear-gradient(to right, #610675, #6a18ad, #8128e7c9 100%);
+        margin: 0;
+        padding: 0;
+
+        .head-right-sec{
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            padding-left:0;
+            p{
+                padding-top: 7px;
+                padding-right: 10%;
+            }
+            #profile-icon-span {
+                position: relative;
+                padding: 10px;
+                height: 10px;
+                width: 10px;
+                background-color: $myyellow;
+                border-radius: 50%;
+                display: inline-block;
+                margin-top: 5%;
+                margin-left: 0%;
+
+                #profile-icon{
+                position: absolute;
+                top: 20%;
+                left: 25%;
+                height: 15px;
+                width: 15px;
+                padding: 0;
+                }
+            }
+            div{
+                margin-top: 4.5%;
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    color: white;
+                
+                    #profile-notif{
+                        @extend #profile-icon-span;
+                        background-color: rgb(243, 72, 72);
+                        margin-left: 0;
+                        padding-top: 20%;
+                        padding-bottom: 45%;
+                        font-weight: bold;
+
+                    }
+                }
+             }
+            a {
+                padding-top: 4.5%;
+                #notif-span{
+                    @extend #profile-icon-span;
+                    margin-left: 0;
+                    #notif-icon{
+                        @extend #profile-icon;
+                        top: 30%;
+                    }
+                }
+            }
+        }
+
+        .activity-list{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            div{
+                margin-left: 5%;
+                margin-bottom: -7%;
+                
+                font-weight: bold;
+            }
+            ul{
+                margin-top: 0;
+                list-style-type: none;
+            
+                li a{
+                    text-decoration: none;
+                    color: white;
+                    span{
+                    position: relative;
+                    top: 10px;
+                    padding: 10px;
+                    height: 10px;
+                    width: 10px;
+                    background-color: $myyellow;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin-right: 3%;
+
+                    img{
+                        position: absolute;
+                        top: 20%;
+                        left: 25%;
+                        height: 15px;
+                        width: 15px;
+                        padding: 0;
+                        }
+                    
+                    }
+                }
+
+                li:hover{
+                    font-weight: bold;   
+                    a span {
+                        height: 20px;
+                        width: 20px;
+                        img{
+                            height: 20px;
+                            width: 20px;
+                        }
+                    }                 
+                }
+            }
+        }
+
+    }
+}
