@@ -3,6 +3,16 @@
 // # Description: First html exersize for satek comp,designig a sample page
 
 $myyellow:rgba($color: #f3f712, $alpha: 0.8);
+@font-face {
+    font-family: MyFont;
+    src: url('../fonts/Vazir-Bold.ttf');
+}
+
+
+* {
+    font-family: MyFont;
+
+}
 body{
     padding: 0;
     margin: 0;
